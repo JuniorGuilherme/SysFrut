@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ClienteActivity" />
-        <activity android:name=".AdicionaCliente"></activity>
+        <activity android:name=".AdicionaCliente" />
+        <activity android:name=".AlteraCliente" />
+        <activity android:name=".AtribuirEmbalagem"></activity>
     </application>
 
 </manifest>

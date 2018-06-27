@@ -49,4 +49,41 @@ public class BdController {
         db.close();
         return cursor;
     }
+
+    public Cursor carregaDadoById(int id){
+        Cursor cursor;
+        String[] campos =  {banco.id,banco.nome};
+        String where = DataBase.id + "=" + id;
+        db = banco.getReadableDatabase();
+        cursor = db.query(DataBase.tabela,campos,where, null, null, null, null, null);
+
+        if(cursor!=null){
+            cursor.moveToFirst();
+        }
+        db.close();
+        return cursor;
+    }
+
+    public void alteraRegistro(int id, String nome){
+        ContentValues valores;
+        String where;
+
+        db = banco.getWritableDatabase();
+
+        where = DataBase.id + "=" + id;
+
+        valores = new ContentValues();
+        valores.put(DataBase.id, id);
+        valores.put(DataBase.nome, nome);
+
+        db.update(DataBase.tabela,valores,where,null);
+        db.close();
+    }
+
+    public void deletaRegistro(int id){
+        String where = DataBase.id + "=" + id;
+        db = banco.getReadableDatabase();
+        db.delete(DataBase.tabela,where,null);
+        db.close();
+    }
 }

@@ -12,7 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="10dp"
-        android:text="Codigo:" />
+        android:text="Codigo:"
+        android:padding="15dp"/>
 
     <TextView
         android:id="@+id/nomeLivro"
@@ -20,6 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
-        android:text="Nome:" />
+        android:text="Nome:"
+        android:padding="15dp"/>
 
 </GridLayout>

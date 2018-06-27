@@ -1,5 +1,6 @@
 package com.example.pc_gamer.sysfrut;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -31,6 +32,9 @@ public class AdicionaCliente extends AppCompatActivity {
                 resultado = crud.inserir(id, nome);
 
                 Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
+
+                Intent intencao = new Intent(AdicionaCliente.this, ClienteActivity.class);
+                AdicionaCliente.this.startActivity(intencao);
             }
         });
     }

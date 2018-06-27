@@ -13,7 +13,7 @@ public class DataBase extends SQLiteOpenHelper {
     public static final String tabela = "clientes";
     public static final String id = "_id";
     public static final String nome = "nome";
-    private static final int version = 1;
+    private static final int version = 3;
 
     public DataBase(Context context) {
         super(context, nome_banco, null, version);
